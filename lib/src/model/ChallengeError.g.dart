@@ -6,11 +6,10 @@ part of 'ChallengeError.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ChallengeError _$ChallengeErrorFromJson(Map<String, dynamic> json) =>
-    ChallengeError(
+ChallengeError _$ChallengeErrorFromJson(Map<String, dynamic> json) => ChallengeError(
       detail: json['detail'] as String?,
       type: json['type'] as String?,
-      status: json['status'] as String?,
+      status: (json['status'] as int?)?.toString(),
     );
 
 Map<String, dynamic> _$ChallengeErrorToJson(ChallengeError instance) {
